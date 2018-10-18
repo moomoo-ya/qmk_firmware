@@ -36,14 +36,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Tab  |      |      | Alt  |Lower |Space |Enter |Raise | Win  |      |Adjust|Func  |
+ * | Tab  |      | Alt  | Alt  |Lower |Space |Enter |Raise | Win  | Win  |Adjust|Func  |
  * `-----------------------------------------------------------------------------------'
  */
 [_WINDOWS] = LAYOUT_ortho_4x12( \
   KC_ESC,  KC_Q,     KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
   KC_LCTRL,KC_A,     KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
   KC_LSFT, KC_Z,     KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT, \
-  KC_TAB,  XXXXXXX,  XXXXXXX, KC_LALT, MO(_LOWER),   KC_SPC,  KC_ENT,  MO(_RAISE),   KC_RWIN, XXXXXXX, MO(_ADJUST), MO(_FUNCTIONS) \
+  KC_TAB,  XXXXXXX,  KC_LALT, KC_LALT, MO(_LOWER),   KC_SPC,  KC_ENT,  MO(_RAISE),   KC_RWIN, KC_RWIN, MO(_ADJUST), MO(_FUNCTIONS) \
 ),
 
 /* MacOS
@@ -54,14 +54,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Tab  |      | Ctrl | Alt  |Lower |Space |Enter |Raise | Alt  |      |Adjust|Func  |
+ * | Tab  | Ctrl | Alt  | Alt  |Lower |Space |Enter |Raise | Alt  | Alt  |Adjust|Func  |
  * `-----------------------------------------------------------------------------------'
  */
 [_MACOS] = LAYOUT_ortho_4x12( \
   KC_ESC,  KC_Q,     KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
   KC_CAPS, KC_A,     KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
   KC_LSFT, KC_Z,     KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT, \
-  KC_TAB,  XXXXXXX,  KC_LCTRL,KC_LALT, LT(_LOWER,KC_LANG2),   KC_SPC,  KC_ENT,  LT(_RAISE,KC_LANG1),  KC_RALT, XXXXXXX, MO(_ADJUST), MO(_FUNCTIONS) \
+  KC_TAB,  KC_LCTRL, KC_LALT, KC_LALT, LT(_LOWER,KC_LANG2),   KC_SPC,  KC_ENT,  LT(_RAISE,KC_LANG1),  KC_RALT, KC_RALT, MO(_ADJUST), MO(_FUNCTIONS) \
 ),
 
 /* Lower
@@ -104,17 +104,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |WhlUp |MsBtn1|  Up  |MsBtn2|      |
+ * |      |      |      |      |      |      |WhlUp |MsBtn1|  Up  |MsBtn2|      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |WhlDwn| Left | Down |Right |      |
+ * |      |      |      |      |      |      |WhlDwn| Left | Down |Right |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_FUNCTIONS] = LAYOUT_ortho_4x12( \
   _______,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_BSPC, \
-  _______, _______, _______, _______, _______, _______, _______, KC_WH_U, KC_BTN1,   KC_UP, KC_BTN2, _______, \
-  _______, _______, _______, _______, _______, _______, _______, KC_WH_D, KC_LEFT, KC_DOWN, KC_RGHT, _______, \
+  _______, _______, _______, _______, _______, _______, KC_WH_U, KC_BTN1,   KC_UP, KC_BTN2, _______, _______, \
+  _______, _______, _______, _______, _______, _______, KC_WH_D, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______\
 ),
 
